@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace LDC_Code_Test
 {
@@ -10,20 +8,20 @@ namespace LDC_Code_Test
     {
         static void Main(string[] args)
         {
-            // Removing duplicates characters
+            //1. Removing duplicates characters
             string replchar = ("AAAc91%cWwWkLq$1ci3_848v3d_K");
             string newString = string.Join("", replchar.ToCharArray().Distinct());
             Console.WriteLine(newString);
 
-            //Replacing the $ sign with £ sign
+            //2. Replacing the $ sign with £ sign
             string newstr = newString.Replace('$', '£');
             Console.WriteLine(newstr);
 
-            //Removing  '4' and '_' from the the string
+            //3. Removing  '4' and '_' from the the string
             string newstr1 = String.Join("", newstr.Split('4', '_'));
             Console.WriteLine(newstr1);
 
-            //Truncating the length of the string to 15 characters
+            //4. Truncating the length of the string to 15 characters
             const int MaxLength = 15;
             string newstr2 = newstr1;
                 if (newstr2.Length > MaxLength)
